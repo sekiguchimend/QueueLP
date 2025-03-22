@@ -74,9 +74,14 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-6">経営陣</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ExecutiveCard 
-              name="谷口 太一"
+              name="谷口 太一（ジョン）"
               position="代表取締役社長 / CEO"
-              bio="ニュージーランド大学工学部を飛び級卒業。AI分野における豊富な経験を活かし、2020年に当社を創業。"
+              bio="6歳のころからプログラミングを始め、圧倒的な技術力を持つ。ニュージーランド大学工学部を飛び級卒業。AI分野における豊富な経験を活かし、2024年に当社を創業。"
+            />
+            <ExecutiveCard 
+              name="渡辺 一輝ジェームス"
+              position="取締役 / COO"
+              bio="ニュージーランドのハーフとして、多言語を操る圧倒的な行動力とグローバルな視点を持つ無敵営業マン。"
             />
           </div>
         </section>
