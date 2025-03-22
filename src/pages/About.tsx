@@ -74,24 +74,9 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-6">経営陣</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ExecutiveCard 
-              name="佐藤 健太"
+              name="谷口 太一"
               position="代表取締役社長 / CEO"
-              bio="AI分野における15年以上の経験を持ち、複数のテック企業でCTOを務めた後、2020年に当社を創業。"
-            />
-            <ExecutiveCard 
-              name="田中 美咲"
-              position="取締役 / CTO"
-              bio="スタンフォード大学コンピュータサイエンス博士。自然言語処理の専門家として国際的な学会で多数の論文を発表。"
-            />
-            <ExecutiveCard 
-              name="鈴木 大輔"
-              position="取締役 / COO"
-              bio="大手コンサルティングファームにて10年間、組織改革プロジェクトを主導。業務効率化の専門家。"
-            />
-            <ExecutiveCard 
-              name="吉田 晴子"
-              position="取締役 / CFO"
-              bio="国内大手投資銀行出身。複数のテクノロジー企業の資金調達を支援した経験を持つ。"
+              bio="ニュージーランド大学工学部を飛び級卒業。AI分野における豊富な経験を活かし、2020年に当社を創業。"
             />
           </div>
         </section>
