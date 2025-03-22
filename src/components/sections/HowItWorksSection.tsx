@@ -74,7 +74,7 @@ const HowItWorksSection = () => {
                   <div className="p-6">
                     <div className="flex flex-col space-y-6">
                       <div className="self-start max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-sm p-4">
-                        <p className="text-gray-800">だい2四はんきの営業データ分析してトレンドおしえて</p>
+                        <p className="text-gray-800">第2四半期の営業データを分析して、トレンドを教えてください</p>
                       </div>
                       <div className="self-end max-w-[80%] bg-blue-50 text-blue-800 rounded-2xl rounded-br-sm p-4">
                         <p>第2四半期の分析結果です：<br />
@@ -100,7 +100,7 @@ const HowItWorksSection = () => {
                   <div className="p-6">
                     <div className="flex flex-col space-y-6">
                       <div className="self-start max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-sm p-4">
-                        <p className="text-gray-800">らいしゅうの部門ミーティングの議事録テンプレ作って参加者全員に送って</p>
+                        <p className="text-gray-800">来週の部門ミーティングの議事録テンプレートを作成し、全員に送付してください</p>
                       </div>
                       <div className="self-end max-w-[80%] bg-blue-50 text-blue-800 rounded-2xl rounded-br-sm p-4">
                         <p>了解しました。以下の手順で対応します：<br />
