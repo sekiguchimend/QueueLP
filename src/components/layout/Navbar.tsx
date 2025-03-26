@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -22,16 +21,19 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass-effect shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "glass-effect shadow-sm h-32"
+          : "bg-transparent h-32"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full">
+          <div className="flex items-center mt-2">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">ワークメイト</span>
-              <span className="hidden md:inline-block ml-1 text-2xl font-light">AI</span>
+              <img 
+                src="/work_mate.png" 
+                alt="ワークメイトAI" 
+                className="h-24 w-auto"
+              />
             </Link>
           </div>
 
