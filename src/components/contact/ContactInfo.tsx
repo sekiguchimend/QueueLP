@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MessageCircle, MapPin, Info } from "lucide-react";
 import ContactMethod from "./ContactMethod";
 
@@ -12,14 +11,14 @@ const ContactInfo = () => {
           icon={<Phone className="text-green-500" />}
           title="お電話"
           detail="平日 9:00-18:00"
-          contact="03-1234-5678"
+          contact="03-6687-0550"
         />
         
         <ContactMethod 
           icon={<Mail className="text-blue-500" />}
           title="メール"
           detail="24時間受付"
-          contact="info@workmate-ai.jp"
+          contact="queue@queuefood.co.jp"
         />
         
         <ContactMethod 
@@ -32,8 +31,8 @@ const ContactInfo = () => {
         <ContactMethod 
           icon={<MapPin className="text-red-500" />}
           title="所在地"
-          detail="〒100-0001"
-          contact="東京都千代田区丸の内1-1-1"
+          detail="〒104-0061"
+          contact="東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F"
         />
       </div>
       
