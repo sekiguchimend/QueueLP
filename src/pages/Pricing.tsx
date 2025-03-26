@@ -54,6 +54,66 @@ const Pricing = () => {
           </p>
         </div>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <svg className="w-8 h-8 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              圧倒的な柔軟性
+            </h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>YouTube、ウェブサイト、スプレッドシート、OCR対応PDFなど、<span className="text-primary font-medium">あらゆる情報ソースに対応</span></span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>情報ソースの<span className="text-primary font-medium">適用方法を細かくカスタマイズ可能</span></span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>ご要望に応じて<span className="text-primary font-medium">多言語対応も可能</span>（詳細はお問い合わせください）</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <svg className="w-8 h-8 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              優れた使いやすさ
+            </h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>情報ソースをアップロードした瞬間から<span className="text-primary font-medium">すぐに利用開始可能</span>。FAQの個別設定は不要</span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>ユーザーの意図を<span className="text-primary font-medium">正確に理解し、的確な回答を提供</span></span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>各回答に<span className="text-primary font-medium">参照元の情報ソースを明示</span>し、信頼性を担保</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <PricingCard plan="プランA" users="使用数1～10名" price="50,000" />
           <PricingCard plan="プランB" users="使用数11名～30名" price="100,000" />
