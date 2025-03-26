@@ -209,17 +209,29 @@ const Terms = () => {
       <Separator className="my-8" />
 
       <section>
-        <h2 className="text-xl font-bold mb-4">10. その他</h2>
+        <h2 className="text-xl font-bold mb-4">10. お問い合わせ</h2>
+        <p className="mb-4">
+          本規約に関するご質問やご不明点がございましたら、以下の連絡先までお問い合わせください：
+        </p>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+          <h3 className="font-medium text-gray-900 mb-2">株式会社Queue</h3>
+          <p className="text-gray-600">
+            住所：〒104-0061 東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F<br />
+            メール：queue@queuefood.co.jp<br />
+            電話：03-6687-0550（平日9:00-18:00）
+          </p>
+        </div>
+      </section>
+
+      <Separator className="my-8" />
+
+      <section>
+        <h2 className="text-xl font-bold mb-4">11. その他</h2>
         <p className="mb-4">
           本規約は日本法に準拠し、解釈されます。本規約に関連して生じる紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
         </p>
         <p className="mb-4">
           本規約のいずれかの条項が無効または執行不能と判断された場合でも、残りの条項は完全に効力を有します。
-        </p>
-        <p>
-          本規約に関するご質問がございましたら、以下の連絡先までお問い合わせください：<br />
-          メール：terms@workmate-ai.co.jp<br />
-          電話：03-1234-5678（平日9:00-18:00）
         </p>
       </section>
     </LegalPageLayout>

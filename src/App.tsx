@@ -12,7 +12,6 @@ import Recruitment from "./pages/Recruitment";
 import JobDetail from "./pages/JobDetail";
 import JobApplication from "./pages/JobApplication";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 import Download from "./pages/Download";
 import Guide from "./pages/Guide";
 import Admin from "./pages/Admin";
@@ -31,6 +30,7 @@ import AdminContacts from "./pages/AdminContacts";
 import { AuthProvider } from "./context/AuthContext";
 import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "@/components/utils/ScrollToTop";
+import Pricing from "./pages/Pricing";
 
 export default function App() {
   return (
@@ -52,6 +52,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/contact" element={<Contact />} />
@@ -61,7 +62,6 @@ export default function App() {
             <Route path="/apply/:id" element={<JobApplication />} />
             <Route path="/apply" element={<JobApplication />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
             <Route path="/download" element={<Download />} />
             <Route path="/guide" element={<Guide />} />
             <Route path="/articles" element={<ArticleList />} />

@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import LoginForm from "./LoginForm";
 
@@ -9,7 +8,7 @@ const LoginCard = () => {
       <CardHeader className="space-y-2 pb-4 px-6 sm:px-8">
         <CardTitle className="text-xl sm:text-2xl font-bold text-center text-gray-800">アカウントにログイン</CardTitle>
         <CardDescription className="text-center text-gray-600 text-sm sm:text-base">
-          AI Business Assistantへようこそ
+          Work Mate AIへようこそ
         </CardDescription>
       </CardHeader>
       <CardContent className="px-6 sm:px-8 pb-8">

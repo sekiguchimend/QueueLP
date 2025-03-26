@@ -12,7 +12,7 @@ const Footer = () => {
 
   const product = [
     { name: "機能", path: "/#features" },
-    { name: "料金", path: "/#pricing" },
+    { name: "料金", path: "/pricing" },
     { name: "導入事例", path: "/case-studies" },
     { name: "ヘルプセンター", path: "/help" },
   ];

@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { Link } from 'react-router-dom';
 import { useToast } from "@/components/ui/use-toast"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -25,7 +23,6 @@ const formSchema = z.object({
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
   const { signIn } = useAuth();
 
@@ -42,66 +39,29 @@ const LoginForm = () => {
     setAuthError(null);
     
     try {
-      if (signupMode) {
-        console.log("Attempting to sign up with:", values.email);
-        // Create a new user account
-        const { data, error: signUpError } = await supabase.auth.signUp({
-          email: values.email,
-          password: values.password,
-        });
-        
-        if (signUpError) {
-          console.error("Sign up error:", signUpError);
-          if (signUpError.message.includes("already") || signUpError.message.includes("exists")) {
-            setAuthError("このメールアドレスは既に登録されています。ログインしてください。");
-          } else {
-            setAuthError(signUpError.message || "アカウント作成に失敗しました。再度お試しください。");
-          }
-          throw signUpError;
+      console.log("Attempting to log in with:", values.email);
+      try {
+        const result = await signIn(values.email, values.password);
+        if (result && result.user) {
+          console.log("Login successful for user:", result.user.email);
+          toast.success("ログインに成功しました");
+        } else {
+          console.error("No user returned from signIn but no error thrown");
+          setAuthError("認証に失敗しました。再度お試しください。");
         }
+      } catch (error: any) {
+        console.error("Login error:", error);
         
-        toast.success("アカウントを作成しました", {
-          description: "ログインしてください",
-        });
-        
-        setSignupMode(false);
-      } else {
-        // Log in with existing account
-        console.log("Attempting to log in with:", values.email);
-        try {
-          const result = await signIn(values.email, values.password);
-          if (result && result.user) {
-            console.log("Login successful for user:", result.user.email);
-            toast.success("ログインに成功しました");
-          } else {
-            // This shouldn't happen due to error handling in signIn, but just in case
-            console.error("No user returned from signIn but no error thrown");
-            setAuthError("認証に失敗しました。再度お試しください。");
-          }
-        } catch (error: any) {
-          console.error("Login error:", error);
-          
-          // Check for specific error types
-          if (error.code === "invalid_credentials" || error.message?.includes("Invalid login credentials")) {
-            setAuthError("メールアドレスまたはパスワードが間違っています。アカウントをお持ちでない場合は、新規登録してください。");
-          } else {
-            setAuthError(error.message || "ログインに失敗しました。再度お試しください。");
-          }
-          toast.error("ログインに失敗しました");
+        if (error.code === "invalid_credentials" || error.message?.includes("Invalid login credentials")) {
+          setAuthError("メールアドレスまたはパスワードが間違っています。");
+        } else {
+          setAuthError(error.message || "ログインに失敗しました。再度お試しください。");
         }
+        toast.error("ログインに失敗しました");
       }
     } catch (error: any) {
       console.error("Auth error:", error);
-      
-      // Handle specific error codes
-      if (error.code === "invalid_credentials") {
-        setAuthError("メールアドレスまたはパスワードが間違っています。アカウントをお持ちでない場合は、新規登録してください。");
-      } else if (error.code === "user_already_exists") {
-        setAuthError("このメールアドレスは既に登録されています。ログインしてください。");
-        setSignupMode(false);
-      } else {
-        setAuthError(error.message || "認証に失敗しました。再度お試しください。");
-      }
+      setAuthError(error.message || "認証に失敗しました。再度お試しください。");
       
       toast.error("認証に失敗しました", {
         description: error.message || "再度お試しください",
@@ -110,12 +70,6 @@ const LoginForm = () => {
       setLoading(false);
     }
   }
-
-  const toggleMode = () => {
-    setSignupMode(!signupMode);
-    setAuthError(null);
-    form.reset();
-  };
 
   return (
     <Form {...form}>
@@ -145,31 +99,11 @@ const LoginForm = () => {
             disabled={loading}
           >
             {loading ? (
-              <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> {signupMode ? '登録中...' : 'ログイン中...'}</>
+              <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> ログイン中...</>
             ) : (
-              signupMode ? '新規登録' : 'ログイン'
+              'ログイン'
             )}
           </Button>
-        </div>
-        
-        <div className="text-center text-sm text-gray-600">
-          {signupMode ? (
-            <>アカウントをお持ちですか？ </>
-          ) : (
-            <>アカウントをお持ちでないですか？ </>
-          )}
-          <button 
-            type="button"
-            onClick={toggleMode}
-            className="font-medium text-primary hover:underline"
-          >
-            {signupMode ? 'ログイン' : '新規登録'}
-          </button>
-        </div>
-        
-        <div className="text-center text-xs text-gray-500 mt-4">
-          <p>テスト用アカウントをお持ちでない場合は「新規登録」から作成してください。</p>
-          <p>登録後、すぐにログイン可能です。</p>
         </div>
       </form>
     </Form>

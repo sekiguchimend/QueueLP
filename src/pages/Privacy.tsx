@@ -150,11 +150,11 @@ const Privacy = () => {
             このプライバシーポリシーに関するご質問やご不明点がございましたら、以下の連絡先までお問い合わせください：
           </p>
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-            <h3 className="font-medium text-gray-900 mb-2">株式会社ワークメイト 個人情報保護窓口</h3>
+            <h3 className="font-medium text-gray-900 mb-2">株式会社Queue 個人情報保護窓口</h3>
             <p className="text-gray-600">
-              住所：〒100-0004 東京都千代田区大手町1-1-1<br />
-              メール：privacy@workmate-ai.co.jp<br />
-              電話：03-1234-5678（平日9:00-18:00）
+              住所：〒104-0061 東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F<br />
+              メール：queue@queuefood.co.jp<br />
+              電話：03-6687-0550（平日9:00-18:00）
             </p>
           </div>
         </section>
