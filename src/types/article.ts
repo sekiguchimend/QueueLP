@@ -1,16 +1,16 @@
-
 export interface Article {
-  id: string;
+  id: number;
   title: string;
-  content: string;
-  category: string;
-  views: number;
   slug: string;
-  published_at: string;
+  content: string;
   excerpt: string;
+  category: string;
+  author: string;
+  created_at: string;
+  updated_at: string;
   is_published: boolean;
-  created_at?: string;
-  updated_at?: string;
+  views: number;
+  tags: string[];
 }
 
 export type ArticleFormData = {

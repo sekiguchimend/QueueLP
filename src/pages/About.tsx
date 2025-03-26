@@ -32,7 +32,7 @@ const About = () => {
             <CompanyInfoCard 
               icon={<CalendarDays />}
               title="設立"
-              value="2024年"
+              value="2024年4月1日"
             />
             <CompanyInfoCard 
               icon={<Landmark />}
