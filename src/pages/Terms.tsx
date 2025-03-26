@@ -1,4 +1,3 @@
-
 import React from "react";
 import LegalPageLayout from "@/components/layout/LegalPageLayout";
 import { Separator } from "@/components/ui/separator";
@@ -6,7 +5,7 @@ import { AlertTriangle, ShieldAlert } from "lucide-react";
 
 const Terms = () => {
   return (
-    <LegalPageLayout title="利用規約" updatedDate="2023年9月1日">
+    <LegalPageLayout title="利用規約" updatedDate="2025年3月26日">
       <div className="bg-amber-50 border border-amber-100 rounded-lg p-4 mb-8 flex items-start">
         <AlertTriangle className="text-amber-500 mr-3 mt-1 flex-shrink-0" />
         <div className="text-sm text-amber-700">

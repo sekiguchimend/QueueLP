@@ -18,7 +18,7 @@ const Privacy = () => {
         <link rel="canonical" href="https://www.queue-ai.co.jp/privacy" />
       </Helmet>
 
-      <LegalPageLayout title="プライバシーポリシー" updatedDate="2023年8月15日">
+      <LegalPageLayout title="プライバシーポリシー" updatedDate="2025年3月26日">
         <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mb-8 flex items-start">
           <Info className="text-blue-500 mr-3 mt-1 flex-shrink-0" />
           <p className="text-sm text-blue-700">
