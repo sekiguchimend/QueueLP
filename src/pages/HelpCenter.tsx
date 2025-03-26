@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -112,6 +111,27 @@ const HelpCenter = () => {
                 </div>
               </div>
             ))}
+
+            {/* お問い合わせ先情報 */}
+            <div className="mt-16 bg-white border border-gray-200 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">お問い合わせ先</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">電話でのお問い合わせ</h3>
+                  <p className="text-gray-600">03-6687-0550</p>
+                  <p className="text-sm text-gray-500">受付時間: 平日 9:00〜18:00</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">メールでのお問い合わせ</h3>
+                  <a href="mailto:queue@queuefood.co.jp" className="text-blue-600 hover:text-blue-800">queue@queuefood.co.jp</a>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">所在地</h3>
+                  <p className="text-gray-600">〒104-0061</p>
+                  <p className="text-gray-600">東京都中央区銀座一丁目22番11号</p>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
