@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,7 +12,8 @@ const HeroSection = () => {
               社内向けAIアシスタント
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900">
-              業務効率を飛躍的に高める
+              業務効率を飛躍的に
+              <span className="block mt-2">高める</span>
               <span className="text-primary block mt-2">AIチャットボット</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-xl">
