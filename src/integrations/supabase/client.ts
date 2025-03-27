@@ -2,10 +2,26 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = "https://joistjaftokyvlkwpdlz.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpvaXN0amFmdG9reXZsa3dwZGx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1NzMzNDksImV4cCI6MjA1ODE0OTM0OX0.JA05i3mNcgPatwiVFK5b2mmVH38pjA9XfcUZFdi-hVc";
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_API_KEY;
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+// 接続テスト用の関数
+export const testSupabaseConnection = async () => {
+  try {
+    const { data, error } = await supabase.from('contacts').select('count').limit(1);
+    if (error) {
+      console.error('Supabase接続エラー:', error);
+      return false;
+    }
+    console.log('Supabase接続成功:', data);
+    return true;
+  } catch (error) {
+    console.error('予期せぬエラー:', error);
+    return false;
+  }
+};

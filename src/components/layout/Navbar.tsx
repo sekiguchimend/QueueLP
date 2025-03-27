@@ -43,6 +43,7 @@ const Navbar = () => {
             <NavItem href="#features" label="機能" />
             <NavItem href="#benefits" label="メリット" />
             <NavItem href="/pricing" label="料金" />
+            <NavItem href="/blog" label="ブログ" />
             <NavItem href="#how-it-works" label="使い方" />
             <NavItem href="#faq" label="よくある質問" />
             <NavItem href="/guide" label="機能ガイド" />
@@ -89,6 +90,7 @@ const Navbar = () => {
                 <MobileNavItem href="#features" label="機能" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#benefits" label="メリット" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="/pricing" label="料金" onClick={() => setIsMobileMenuOpen(false)} />
+                <MobileNavItem href="/blog" label="ブログ" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#how-it-works" label="使い方" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#faq" label="よくある質問" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="/guide" label="機能ガイド" onClick={() => setIsMobileMenuOpen(false)} />

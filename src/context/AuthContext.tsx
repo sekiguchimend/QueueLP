@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Session, User, AuthError } from '@supabase/supabase-js';
@@ -42,14 +41,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Helper function to handle navigation after auth state change
   const navigateBasedOnRole = (event: string, role: string) => {
-    if (['SIGNED_IN', 'TOKEN_REFRESHED', 'USER_UPDATED'].includes(event)) {
-      // Only redirect on these events
-      if (role === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/dashboard');
-      }
-    } else if (event === 'SIGNED_OUT') {
+    // ログアウト時のみ自動遷移
+    if (event === 'SIGNED_OUT') {
       navigate('/login');
     }
   };
@@ -114,7 +107,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       
       console.log("Sign in successful:", data.user?.email);
-      // Navigation is handled in the auth state change listener
+      // ログイン成功後はダッシュボードに遷移
+      if (isAdminEmail(data.user?.email)) {
+        navigate('/admin');
+      } else {
+        navigate('/dashboard');
+      }
       return data;
     } catch (error: any) {
       console.error("Sign in error:", error);
@@ -132,7 +130,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.error("Sign out error:", error);
         throw error;
       }
-      // Navigation is handled in the auth state change listener
+      navigate('/login');
     } catch (error) {
       console.error("Sign out error:", error);
       throw error;

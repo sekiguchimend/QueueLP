@@ -31,6 +31,10 @@ import { AuthProvider } from "./context/AuthContext";
 import Dashboard from "./pages/Dashboard";
 import ScrollToTop from "@/components/utils/ScrollToTop";
 import Pricing from "./pages/Pricing";
+import { Blog } from "./pages/Blog";
+import { BlogPost } from "./pages/BlogPost";
+import Register from "./pages/Register";
+import PrivateRoute from "./components/PrivateRoute";
 
 export default function App() {
   return (
@@ -68,7 +72,7 @@ export default function App() {
             <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/status" element={<ServiceStatus />} />
             <Route path="/demo" element={<DemoComingSoon />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/contacts" element={<AdminContacts />} />
             <Route path="/admin/users" element={<AdminUsers />} />
@@ -78,6 +82,9 @@ export default function App() {
             <Route path="/admin/articles" element={<AdminArticles />} />
             <Route path="/admin/articles/new" element={<ArticleForm />} />
             <Route path="/admin/articles/edit/:id" element={<ArticleForm />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Toaster />

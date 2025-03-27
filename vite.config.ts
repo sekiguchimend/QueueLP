@@ -3,38 +3,25 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
-    host: "::",
-    port: 8080,
-    // Add historyApiFallback for development server
-    historyApiFallback: true,
+    port: 5173,
+    host: true,
+    strictPort: true,
   },
-  plugins: [
-    react(),
-  ].filter(Boolean),
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Add build configuration for SPA routing
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-        },
-      },
-    },
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: true,
   },
-  // This ensures that the index.html is served for any route
   preview: {
-    port: 8080,
-    historyApiFallback: true,
+    port: 5173,
+    strictPort: true,
   },
-  // Add meta tags configuration
-  meta: {
-    ogImage: '/work_mate.png'
-  }
-}));
+});
