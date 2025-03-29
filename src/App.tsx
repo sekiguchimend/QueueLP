@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "./components/ui/toaster";
 import { HelmetProvider, Helmet } from "react-helmet-async";
-import Index from "./pages/index";
+import Home from "./pages/index";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -54,7 +54,7 @@ export default function App() {
             <meta name="twitter:description" content="ワークメイトAIが提供する効率的な業務サポートのためのAIチャットボット" />
           </Helmet>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/privacy" element={<Privacy />} />

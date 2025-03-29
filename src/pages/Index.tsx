@@ -2,15 +2,15 @@ import React from 'react';
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from 'framer-motion';
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import FeaturesSection from "@/components/sections/FeaturesSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import FaqSection from "@/components/sections/FaqSection";
-import CtaSection from "@/components/sections/CtaSection";
-import ChallengesSection from "@/components/sections/ChallengesSection";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import HeroSection from "../components/sections/HeroSection";
+import FeaturesSection from "../components/sections/FeaturesSection";
+import BenefitsSection from "../components/sections/BenefitsSection";
+import HowItWorksSection from "../components/sections/HowItWorksSection";
+import FaqSection from "../components/sections/FaqSection";
+import CtaSection from "../components/sections/CtaSection";
+import ChallengesSection from "../components/sections/ChallengesSection";
 
 export default function Home() {
   // Smooth scrolling for anchor links
