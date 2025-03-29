@@ -1,7 +1,7 @@
 // _app.tsx
 import { useEffect, useState } from 'react';
 import App from '../App'; // App.tsx をインポート
-import '@/index.css'; // グローバルCSSをインポート
+import '@/index.css'; // グローバルCSSをインポー
 import '../App.css'; // App.cssをインポー
 
 export default function CustomApp() {
