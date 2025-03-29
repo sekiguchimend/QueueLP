@@ -30,7 +30,7 @@ export const incrementArticleViews = async (id: string): Promise<Article | null>
       return null;
     }
     
-    return data as Article;
+    return data as unknown as Article;
   } catch (err) {
     console.error('Failed to increment article views:', err);
     return null;
@@ -52,7 +52,7 @@ export const getMostViewedArticles = async (limit: number = 5): Promise<Article[
       return [];
     }
     
-    return data as Article[];
+    return data as unknown as Article[];
   } catch (err) {
     console.error('Failed to fetch most viewed articles:', err);
     return [];

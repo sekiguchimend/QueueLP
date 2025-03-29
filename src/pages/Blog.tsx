@@ -6,7 +6,7 @@ import { BlogPost } from '@/types/blog';
 import { getBlogPosts } from '@/services/blogService';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-export const Blog = () => {
+const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -163,3 +163,4 @@ export const Blog = () => {
     </div>
   );
 }; 
+export default Blog;

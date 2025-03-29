@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { ja } from 'date-fns/locale';
-import type { BlogPost } from '@/types/blog';
+import type {BlogPost}  from '@/types/blog';
 import { getBlogPost } from '@/services/blogService';
 import Navbar from '@/components/layout/Navbar';
 import { Helmet } from 'react-helmet-async';
 import Footer from '@/components/layout/Footer';
 
-export const BlogPost = () => {
+ const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
@@ -195,3 +195,4 @@ export const BlogPost = () => {
     </div>
   );
 }; 
+export default BlogPost;

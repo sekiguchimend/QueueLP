@@ -1,5 +1,5 @@
 export interface Article {
-  id: number;
+  id: string;
   title: string;
   slug: string;
   content: string;
@@ -11,6 +11,8 @@ export interface Article {
   is_published: boolean;
   views: number;
   tags: string[];
+  published_at?: string; // `published_at`を追加
+
 }
 
 export type ArticleFormData = {
