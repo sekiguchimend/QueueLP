@@ -21,7 +21,6 @@ const nextConfig = {
     return config;
   },
   // ビルド時の出力ディレクトリを指定
-  distDir: 'dist',  // 例えば 'build' フォルダに出力する場合
 };
 
 export default nextConfig;
