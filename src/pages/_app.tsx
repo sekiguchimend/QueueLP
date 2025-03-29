@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import App from '../App'; // App.tsx をインポート
 import '@/index.css'; // グローバルCSSをインポート
-import '../App.css'; // App.cssをインポート
+import '../App.css'; // App.cssをインポー
 
 export default function CustomApp() {
   const [isClient, setIsClient] = useState(false);
