@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { HelmetProvider, Helmet } from "react-helmet-async";
-import Index from "./pages/index";
+import Index from "@/pages/index";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -43,7 +43,7 @@ export default function App() {
         <AuthProvider>
           <ScrollToTop />
           <Helmet>
-            <meta name="description" content="ワークメイトAI - 業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール。" />
+            <meta name="description" content="ワークメイトAI - 業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール" />
             <meta name="keywords" content="ワークメイトAI, AI, チャットボット, 業務効率化, 生産性向上, 社内チャットボット, AI業務支援, 自然言語処理, 社内知識検索" />
             <meta property="og:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
             <meta property="og:description" content="ワークメイトAIが提供する効率的な業務サポートのためのAIチャットボット - 業務効率化の新しいカタチ" />
