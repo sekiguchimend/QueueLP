@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/layout/Navbar";
@@ -10,6 +10,7 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import FaqSection from "@/components/sections/FaqSection";
 import CtaSection from "@/components/sections/CtaSection";
 import ChallengesSection from "@/components/sections/ChallengesSection";
+import { motion } from 'framer-motion';
 
 const Index = () => {
   // Smooth scrolling for anchor links
@@ -43,48 +44,26 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Helmet>
-        <title>ワークメイトAI | 次世代の業務効率化チャットボット</title>
-        <meta name="description" content="ワークメイトAIは業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツールです。" />
-        <meta name="keywords" content="ワークメイトAI, AI, チャットボット, 業務効率化, 生産性向上, 社内チャットボット, AI業務支援, 社内知識検索, 業務自動化" />
-        <link rel="canonical" href="https://www.workmate-ai.jp/" />
-        <meta property="og:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
-        <meta property="og:description" content="ワークメイトAIは業務効率を飛躍的に高めるAIチャットボットです。社内情報へのアクセスを迅速化し、業務フローをスマートにします。" />
-        <meta property="og:url" content="https://www.workmate-ai.jp/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
-        <meta name="twitter:description" content="ワークメイトAIは業務効率を飛躍的に高めるAIチャットボットです。" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "ワークメイトAI",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "JPY"
-              },
-              "description": "業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール。"
-            }
-          `}
-        </script>
+        <title>Workmate AI - ホーム</title>
+        <meta name="description" content="Workmate AI - あなたのビジネスパートナー" />
       </Helmet>
-      <Navbar />
-      <main className="flex-grow">
-        <HeroSection />
-        <ChallengesSection />
-        <FeaturesSection />
-        <BenefitsSection />
-        <HowItWorksSection />
-        <FaqSection />
-        <CtaSection />
-      </main>
-      <Footer />
-    </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto px-4 py-8"
+      >
+        <h1 className="text-4xl font-bold mb-6">Workmate AIへようこそ</h1>
+        <p className="text-lg mb-4">
+          あなたのビジネスをサポートするAIパートナー
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {/* ここにコンテンツを追加 */}
+        </div>
+      </motion.div>
+    </>
   );
 };
 
