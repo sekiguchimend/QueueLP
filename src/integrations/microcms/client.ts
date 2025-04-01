@@ -17,3 +17,4 @@ console.log('microCMS Configuration:', {
   serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN,
   apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY.substring(0, 4) + '...',
 }); 
+//a
