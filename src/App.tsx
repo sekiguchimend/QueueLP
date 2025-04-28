@@ -35,6 +35,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Register from "./pages/Register";
 import PrivateRoute from "./components/PrivateRoute";
+import ServiceDetail from "./pages/ServiceDetail";
 
 export default function App() {
   return (
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/status" element={<ServiceStatus />} />
             <Route path="/demo" element={<DemoComingSoon />} />
+            <Route path="/service-detail" element={<ServiceDetail />} />
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/contacts" element={<AdminContacts />} />

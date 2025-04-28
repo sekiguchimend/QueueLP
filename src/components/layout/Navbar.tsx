@@ -42,6 +42,7 @@ const Navbar = () => {
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             <NavItem href="#features" label="機能" />
             <NavItem href="#benefits" label="メリット" />
+            <NavItem href="/service-detail" label="サービス詳細" />
             <NavItem href="/pricing" label="料金" />
             <NavItem href="/blog" label="ブログ" />
             <NavItem href="#how-it-works" label="使い方" />
@@ -89,6 +90,7 @@ const Navbar = () => {
               <div className="flex flex-col space-y-2 md:space-y-3">
                 <MobileNavItem href="#features" label="機能" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#benefits" label="メリット" onClick={() => setIsMobileMenuOpen(false)} />
+                <MobileNavItem href="/service-detail" label="サービス詳細" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="/pricing" label="料金" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="/blog" label="ブログ" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#how-it-works" label="使い方" onClick={() => setIsMobileMenuOpen(false)} />
