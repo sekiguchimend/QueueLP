@@ -1,0 +1,26 @@
+# robots.txt for workmate-ai.jp
+User-agent: *
+Allow: /
+Allow: /en/
+
+# 管理者ページなど検索結果に表示させたくないパスを指定
+Disallow: /admin/
+Disallow: /login
+Disallow: /dashboard
+Disallow: /register
+
+# 開発中または一時的なページをブロック
+Disallow: /demo
+Disallow: /coming-soon
+
+# クローラーごとの特別な指示
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+User-agent: Bingbot
+Allow: /*.js$
+Allow: /*.css$
+
+# サイトマップの場所を指定
+Sitemap: https://www.workmate-ai.jp/sitemap.xml 
