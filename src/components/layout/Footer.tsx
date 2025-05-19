@@ -145,7 +145,7 @@ const Footer = () => {
                 <br />
                 東京都中央区銀座8丁目17番5号
                 <br />
-                THE HUB 銀座OCT 2F
+                THE HUB 銀座OCT
               </p>
             </div>
           </div>
