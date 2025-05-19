@@ -13,14 +13,14 @@ const Footer = () => {
   const product = [
     { name: "機能", path: "/#features" },
     { name: "料金", path: "/pricing" },
-    { name: "導入事例", path: "/case-studies" },
+    // { name: "導入事例", path: "/case-studies" },
     { name: "ヘルプセンター", path: "/help" },
   ];
 
   const resources = [
     { name: "ブログ", path: "/blog" },
-    { name: "ニュース", path: "/news" },
-    { name: "開発者ドキュメント", path: "/docs" },
+    // { name: "ニュース", path: "/news" },
+    // { name: "開発者ドキュメント", path: "/docs" },
     { name: "ステータス", path: "/status" },
   ];
 
@@ -135,17 +135,17 @@ const Footer = () => {
                 <span className="text-xs">平日 9:00〜18:00</span>
               </p>
               <a 
-                href="mailto:queue@queuefood.co.jp" 
+                href="mailto:queue@queue-tech.jp" 
                 className="text-sm text-blue-600 hover:text-blue-800"
               >
-                queue@queuefood.co.jp
+                queue@queue-tech.jp
               </a>
               <p className="text-sm text-gray-600">
                 〒104-0061
                 <br />
-                東京都中央区銀座一丁目22番11号
+                東京都中央区銀座8丁目17番5号
                 <br />
-                銀座大竹ビジデンス 2F
+                THE HUB 銀座OCT 2F
               </p>
             </div>
           </div>

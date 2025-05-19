@@ -53,6 +53,8 @@ export default function App() {
             <meta name="twitter:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
             <meta name="twitter:description" content="ワークメイトAIが提供する効率的な業務サポートのためのAIチャットボット" />
           </Helmet>
+          <Toaster />
+          <SonnerToaster position="top-center" closeButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -87,8 +89,6 @@ export default function App() {
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Toaster />
-          <SonnerToaster position="top-center" closeButton />
         </AuthProvider>
       </Router>
     </HelmetProvider>
