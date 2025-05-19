@@ -48,8 +48,8 @@ const Navbar = () => {
             <NavItem href="#how-it-works" label="使い方" />
             <NavItem href="#faq" label="よくある質問" />
             <NavItem href="/guide" label="機能ガイド" />
-            <NavItem href="/help" label="ヘルプセンター" />
-            <NavItem href="/contact" label="お問い合わせ" />
+{/*             <NavItem href="/help" label="ヘルプセンター" />
+            <NavItem href="/contact" label="お問い合わせ" /> */}
             <Button asChild className="ml-4 bg-primary hover:bg-primary/90 text-white transition-all shadow-md hover:shadow-lg">
               <Link to="/login">ログイン</Link>
             </Button>
@@ -96,8 +96,8 @@ const Navbar = () => {
                 <MobileNavItem href="#how-it-works" label="使い方" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="#faq" label="よくある質問" onClick={() => setIsMobileMenuOpen(false)} />
                 <MobileNavItem href="/guide" label="機能ガイド" onClick={() => setIsMobileMenuOpen(false)} />
-                <MobileNavItem href="/help" label="ヘルプセンター" onClick={() => setIsMobileMenuOpen(false)} />
-                <MobileNavItem href="/contact" label="お問い合わせ" onClick={() => setIsMobileMenuOpen(false)} />
+{/*                 <MobileNavItem href="/help" label="ヘルプセンター" onClick={() => setIsMobileMenuOpen(false)} />
+                <MobileNavItem href="/contact" label="お問い合わせ" onClick={() => setIsMobileMenuOpen(false)} /> */}
                 <div className="pt-2 md:pt-3">
                   <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white transition-all">
                     <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>ログイン</Link>
