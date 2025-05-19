@@ -32,7 +32,7 @@ const ContactInfo = () => {
           icon={<MapPin className="text-red-500" />}
           title="所在地"
           detail="〒104-0061"
-          contact="東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F"
+          contact="東京都中央区銀座8丁目17番5号 THE HUB 銀座OCT"
         />
       </div>
       
