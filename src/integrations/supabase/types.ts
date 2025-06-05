@@ -174,6 +174,39 @@ export type Database = {
         }
         Relationships: []
       }
+      document_requests: {
+        Row: {
+          id: string
+          created_at: string | null
+          email: string
+          name: string
+          phone: string
+          position: string
+          company: string
+          status: string
+        }
+        Insert: {
+          id?: string
+          created_at?: string | null
+          email: string
+          name: string
+          phone: string
+          position: string
+          company: string
+          status?: string
+        }
+        Update: {
+          id?: string
+          created_at?: string | null
+          email?: string
+          name?: string
+          phone?: string
+          position?: string
+          company?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       monthly_statistics: {

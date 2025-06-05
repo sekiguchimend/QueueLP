@@ -6,7 +6,12 @@ import { Clock, Calendar, BellRing, MailCheck, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import { useToast } from "@/components/ui/use-toast";
+=======
+import { useToast } from "@/hooks/use-toast";
+import RequestForm from "@/components/RequestForm";
+>>>>>>> 5aa0d380a191484e1419588ae77aad465988a67f
 
 const DemoComingSoon = () => {
   const [email, setEmail] = useState("");
@@ -121,7 +126,7 @@ const DemoComingSoon = () => {
             </div>
             
             {/* Notification Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-xl mx-auto border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-xl mx-auto border border-gray-100 mb-16">
               <h3 className="text-xl font-semibold mb-4">
                 デモ版公開時にお知らせします
               </h3>
@@ -150,6 +155,18 @@ const DemoComingSoon = () => {
               <p className="text-xs text-gray-500 mt-3">
                 ※ お客様の個人情報は当社プライバシーポリシーに基づき適切に管理いたします
               </p>
+            </div>
+
+            {/* Document Request Form */}
+            <div className="mt-16">
+              <h2 className="text-3xl font-bold mb-8 text-center">
+                資料請求
+              </h2>
+              <p className="text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+                ワークメイトAIの詳細資料をお送りいたします。
+                ご質問やご要望がございましたら、お気軽にお問い合わせください。
+              </p>
+              <RequestForm />
             </div>
           </motion.div>
         </div>

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "./components/ui/toaster";
 import { HelmetProvider, Helmet } from "react-helmet-async";
-import Index from "./pages/Index";
+import Home from "./pages/Index";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -29,12 +29,15 @@ import DemoComingSoon from "./pages/DemoComingSoon";
 import AdminContacts from "./pages/AdminContacts";
 import { AuthProvider } from "./context/AuthContext";
 import Dashboard from "./pages/Dashboard";
-import ScrollToTop from "@/components/utils/ScrollToTop";
+import ScrollToTop from "./components/utils/ScrollToTop";
 import Pricing from "./pages/Pricing";
-import { Blog } from "./pages/Blog";
-import { BlogPost } from "./pages/BlogPost";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Register from "./pages/Register";
 import PrivateRoute from "./components/PrivateRoute";
+import ServiceDetail from "./pages/ServiceDetail";
+import LocalBusiness from "./components/schema/LocalBusiness";
+import WebSite from "./components/schema/WebSite";
 
 export default function App() {
   return (
@@ -43,20 +46,28 @@ export default function App() {
         <AuthProvider>
           <ScrollToTop />
           <Helmet>
-            <meta name="description" content="ワークメイトAI - 業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール。" />
-            <meta name="keywords" content="ワークメイトAI, AI, チャットボット, 業務効率化, 生産性向上, 社内チャットボット, AI業務支援, 自然言語処理, 社内知識検索" />
-            <meta property="og:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
-            <meta property="og:description" content="ワークメイトAIが提供する効率的な業務サポートのためのAIチャットボット - 業務効率化の新しいカタチ" />
+            <meta name="description" content="ワークメイトAI（Workmate AI）は企業内知識の活用を効率化する次世代AIチャットボットです。社内情報へのアクセス迅速化、業務自動化、データ分析を通じて業務効率を平均30%向上させます。導入企業は情報検索時間の短縮、知識の共有促進、意思決定の質向上など多数のメリットを実現しています。" />
+            <meta name="keywords" content="Workmate AI, ワークメイトAI, AIチャットボット, AI chatbot, 業務効率化, workplace productivity, 社内知識検索, enterprise search, 企業DX, digital transformation, 生産性向上, productivity improvement, 社内情報活用, knowledge management, AI業務支援, AI assistant, 自然言語処理, NLP, データ分析, data analytics, 業務自動化, workflow automation, ナレッジマネジメント, 企業内AI, enterprise AI" />
+            <meta property="og:title" content="Workmate AI | ワークメイトAI - 企業内知識を活用した次世代の業務効率化AIチャットボット" />
+            <meta property="og:description" content="Workmate AI（ワークメイトAI）は企業内知識の活用を効率化する次世代AIチャットボットです。社内情報へのアクセス迅速化、業務自動化、データ分析を通じて業務効率を平均30%向上させます。" />
             <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="ワークメイトAI" />
+            <meta property="og:site_name" content="Workmate AI | ワークメイトAI" />
+            <meta property="og:image" content="https://www.workmate-ai.jp/images/og-image.jpg" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:locale" content="ja_JP" />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
-            <meta name="twitter:description" content="ワークメイトAIが提供する効率的な業務サポートのためのAIチャットボット" />
+            <meta name="twitter:title" content="Workmate AI | ワークメイトAI - 企業内知識を活用した次世代の業務効率化チャットボット" />
+            <meta name="twitter:description" content="Workmate AI（ワークメイトAI）は企業内知識の活用を効率化する次世代AIチャットボットです。社内情報へのアクセス迅速化、業務自動化、データ分析を通じて業務効率を平均30%向上させます。" />
+            <meta name="twitter:image" content="https://www.workmate-ai.jp/images/twitter-card.jpg" />
+            <link rel="alternate" href="https://www.workmate-ai.jp" hrefLang="ja" />
+            <link rel="alternate" href="https://www.workmate-ai.jp/en" hrefLang="en" />
+            <link rel="alternate" href="https://www.workmate-ai.jp" hrefLang="x-default" />
+            <meta name="format-detection" content="telephone=no" />
+            <meta name="theme-color" content="#4f46e5" />
           </Helmet>
-          <Toaster />
-          <SonnerToaster position="top-center" closeButton />
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/privacy" element={<Privacy />} />
@@ -74,6 +85,7 @@ export default function App() {
             <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/status" element={<ServiceStatus />} />
             <Route path="/demo" element={<DemoComingSoon />} />
+            <Route path="/service-detail" element={<ServiceDetail />} />
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/contacts" element={<AdminContacts />} />

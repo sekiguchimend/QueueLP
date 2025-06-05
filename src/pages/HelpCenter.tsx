@@ -9,7 +9,7 @@ import HelpFooter from "@/components/help/HelpFooter";
 // サンプル記事データ
 const sampleArticles: Article[] = [
   {
-    id: 1,
+    id: "1",
     title: "ワークメイトAIの基本的な使い方",
     slug: "basic-usage",
     content: "ワークメイトAIの基本的な使い方について説明します...",
@@ -23,7 +23,7 @@ const sampleArticles: Article[] = [
     tags: ["入門", "基本機能"]
   },
   {
-    id: 2,
+    id: "2",
     title: "AIアシスタントとの効果的な対話方法",
     slug: "effective-communication",
     content: "AIアシスタントとより効果的に対話するためのコツを紹介します...",
@@ -37,7 +37,7 @@ const sampleArticles: Article[] = [
     tags: ["AI対話", "コミュニケーション"]
   },
   {
-    id: 3,
+    id: "3",
     title: "セキュリティ設定のベストプラクティス",
     slug: "security-best-practices",
     content: "企業でワークメイトAIを安全に利用するためのセキュリティ設定について...",
@@ -51,7 +51,7 @@ const sampleArticles: Article[] = [
     tags: ["セキュリティ", "設定"]
   },
   {
-    id: 4,
+    id: "4",
     title: "よくあるトラブルと解決方法",
     slug: "troubleshooting",
     content: "ワークメイトAI利用時によくあるトラブルとその解決方法を紹介します...",
@@ -65,7 +65,7 @@ const sampleArticles: Article[] = [
     tags: ["トラブル対応", "FAQ"]
   },
   {
-    id: 5,
+    id: "5",
     title: "データのバックアップと復元方法",
     slug: "backup-restore",
     content: "重要なデータを安全にバックアップし、必要な時に復元する方法を解説します...",
@@ -100,7 +100,7 @@ const HelpCenter = () => {
           return;
         }
         
-        setArticles(data || []);
+        setArticles(data as Article[]);
       } catch (error) {
         console.error("Failed to fetch articles:", error);
       } finally {

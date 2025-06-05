@@ -1,17 +1,18 @@
-
+import React from 'react';
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import FeaturesSection from "@/components/sections/FeaturesSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import FaqSection from "@/components/sections/FaqSection";
-import CtaSection from "@/components/sections/CtaSection";
-import ChallengesSection from "@/components/sections/ChallengesSection";
+import { motion } from 'framer-motion';
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import HeroSection from "../components/sections/HeroSection";
+import FeaturesSection from "../components/sections/FeaturesSection";
+import BenefitsSection from "../components/sections/BenefitsSection";
+import HowItWorksSection from "../components/sections/HowItWorksSection";
+import FaqSection from "../components/sections/FaqSection";
+import CtaSection from "../components/sections/CtaSection";
+import ChallengesSection from "../components/sections/ChallengesSection";
 
-const Index = () => {
+export default function Home() {
   // Smooth scrolling for anchor links
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
@@ -43,7 +44,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <motion.div 
+      className="min-h-screen flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Helmet>
         <title>ワークメイトAI | 次世代の業務効率化チャットボット</title>
         <meta name="description" content="ワークメイトAIは業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツールです。" />
@@ -55,23 +61,6 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="ワークメイトAI | 次世代の業務効率化チャットボット" />
         <meta name="twitter:description" content="ワークメイトAIは業務効率を飛躍的に高めるAIチャットボットです。" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "ワークメイトAI",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "JPY"
-              },
-              "description": "業務効率を飛躍的に高めるAIチャットボット。社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール。"
-            }
-          `}
-        </script>
       </Helmet>
       <Navbar />
       <main className="flex-grow">
@@ -84,8 +73,6 @@ const Index = () => {
         <CtaSection />
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
-};
-
-export default Index;
+}

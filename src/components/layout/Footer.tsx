@@ -13,7 +13,7 @@ const Footer = () => {
   const product = [
     { name: "機能", path: "/#features" },
     { name: "料金", path: "/pricing" },
-    // { name: "導入事例", path: "/case-studies" },
+    { name: "導入事例", path: "/case-studies" },
     { name: "ヘルプセンター", path: "/help" },
   ];
 
@@ -145,7 +145,7 @@ const Footer = () => {
                 <br />
                 東京都中央区銀座8丁目17番5号
                 <br />
-                THE HUB 銀座OCT 2F
+                銀座大竹ビジデンス 2F
               </p>
             </div>
           </div>

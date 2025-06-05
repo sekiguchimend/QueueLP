@@ -12,6 +12,10 @@ type AuthContextType = {
     user: User | null;
     session: Session | null;
   }>;
+  signUp: (email: string, password: string) => Promise<{
+    user: User | null;
+    session: Session | null;
+  }>;
   signOut: () => Promise<void>;
   loading: boolean;
 };
@@ -114,8 +118,34 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         navigate('/dashboard');
       }
       return data;
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Sign in error:", error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const signUp = async (email: string, password: string) => {
+    setLoading(true);
+    try {
+      console.log(`Attempting to sign up with email: ${email}`);
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+      
+      if (error) {
+        console.error("Sign up error:", error);
+        throw error;
+      }
+      
+      console.log("Sign up successful:", data.user?.email);
+      // 登録成功後はダッシュボードに遷移
+      navigate('/dashboard');
+      return data;
+    } catch (error: unknown) {
+      console.error("Sign up error:", error);
       throw error;
     } finally {
       setLoading(false);
@@ -144,6 +174,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     session,
     userRole,
     signIn,
+    signUp,
     signOut,
     loading,
   };

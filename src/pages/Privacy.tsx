@@ -151,9 +151,8 @@ const Privacy = () => {
           </p>
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
             <h3 className="font-medium text-gray-900 mb-2">株式会社Queue 個人情報保護窓口</h3>
-            <p className="text-gray-600">
-              住所：〒104-0061 東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F<br />
-              メール：queue@queuefood.co.jp<br />
+            <p className="text-gray-600">  東京都中央区銀座8丁目17番5号THE HUB 銀座OCT<br />
+              メール：queue@queue-tech.jp<br />
               電話：03-6687-0550（平日9:00-18:00）
             </p>
           </div>

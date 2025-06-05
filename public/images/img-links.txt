@@ -1,0 +1,40 @@
+# OGP画像設定箇所
+
+このディレクトリには以下のSEO用画像ファイルを作成してください：
+
+1. og-image.jpg - OGP（Open Graph Protocol）用の画像
+   - 推奨サイズ: 1200 x 630 ピクセル
+   - App.tsxやページメタデータで参照されています
+   - 用途: Facebook、Twitterなどでシェアされた際のプレビュー画像
+
+2. twitter-card.jpg - Twitter Card用の画像
+   - 推奨サイズ: 1200 x 600 ピクセル
+   - App.tsxやページメタデータで参照されています
+   - 用途: Twitterでシェアされた際のプレビュー画像
+
+3. og-image-en.jpg - 英語版OGP用画像
+   - 推奨サイズ: 1200 x 630 ピクセル
+   - 英語コンテンツ向けのOGP画像
+   - 英語ユーザー向けにローカライズされたテキストを含むべき
+
+4. twitter-card-en.jpg - 英語版Twitter Card用画像
+   - 推奨サイズ: 1200 x 600 ピクセル
+   - 英語コンテンツ向けのTwitter Card画像
+   - 英語ユーザー向けにローカライズされたテキストを含むべき
+
+これらの画像は以下のメタタグで参照されています:
+```
+<meta property="og:image" content="https://www.workmate-ai.jp/images/og-image.jpg" />
+<meta name="twitter:image" content="https://www.workmate-ai.jp/images/twitter-card.jpg" />
+```
+
+英語ページでは、言語に応じた画像を使い分けることで、よりユーザーに適したコンテンツを提供できます:
+```
+<!-- 英語ページ用 -->
+<meta property="og:image" content="https://www.workmate-ai.jp/images/og-image-en.jpg" />
+<meta name="twitter:image" content="https://www.workmate-ai.jp/images/twitter-card-en.jpg" />
+```
+
+サービス名「Workmate AI」を強調し、英語・日本語両方の表記を含めることで、検索エンジンでの「workmate」というキーワードでの発見性が高まります。特に英語圏のユーザーにアピールする際に重要です。
+
+サービスのブランドイメージやロゴを活用した、専門的でクリアな画像を使用することでSEO効果が高まります。 

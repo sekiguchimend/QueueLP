@@ -47,7 +47,7 @@ const About = () => {
             <CompanyInfoCard 
               icon={<MapPin />}
               title="本社所在地"
-              value="〒104-0061 東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F"
+              value="〒104-0061 東京都中央区銀座8丁目17番5号 THE HUB 銀座OCT"
             />
             <CompanyInfoCard 
               icon={<Award />}

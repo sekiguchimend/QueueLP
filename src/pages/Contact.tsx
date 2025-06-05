@@ -1,10 +1,11 @@
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactHero from "@/components/contact/ContactHero";
 import ContactInfo from "@/components/contact/ContactInfo";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactFaqSection from "@/components/contact/ContactFaqSection";
+import RequestForm from "@/components/RequestForm";
+
 import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
@@ -36,6 +37,15 @@ const Contact = () => {
                 {/* Contact Form */}
                 <ContactForm />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Request Form Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl mx-auto">
+              <RequestForm />
             </div>
           </div>
         </section>

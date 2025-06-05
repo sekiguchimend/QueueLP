@@ -1,0 +1,13 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-useless-escape": "off",
+    "regexp/no-unnecessary-escape": "off",
+    "react-refresh/only-export-components": "off"
+
+  }
+} 

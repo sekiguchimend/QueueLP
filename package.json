@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+<<<<<<< HEAD
     "build:dev": "vite build --mode development",
+=======
+    "build:dev": "next build --mode development",
+>>>>>>> 5aa0d380a191484e1419588ae77aad465988a67f
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -52,6 +56,7 @@
     "microcms-js-sdk": "^3.2.0",
     "next": "^15.2.4",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.11",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -70,8 +75,10 @@
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "@vitejs/plugin-react-swc": "^3.8.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
@@ -83,7 +90,6 @@
     "sharp": "^0.33.5",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.14"
+    "typescript-eslint": "^8.0.1"
   }
 }

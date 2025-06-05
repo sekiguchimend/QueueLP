@@ -19,7 +19,7 @@ export const getArticles = async (published = true): Promise<ArticleType[]> => {
       console.error("Error fetching articles:", error);
       return [];
     }
-    return data as ArticleType[];
+    return data as unknown as ArticleType[];
   } catch (error) {
     console.error("Exception when fetching articles:", error);
     return [];
@@ -38,7 +38,7 @@ export const getArticleById = async (id: string): Promise<ArticleType | null> =>
       console.error("Error fetching article by ID:", error);
       return null;
     }
-    return data as ArticleType;
+    return data as unknown as ArticleType;
   } catch (error) {
     console.error("Exception when fetching article by ID:", error);
     return null;
@@ -57,7 +57,7 @@ export const getArticleBySlug = async (slug: string): Promise<ArticleType | null
       console.error("Error fetching article by slug:", error);
       return null;
     }
-    return data as ArticleType;
+    return data as unknown as ArticleType;
   } catch (error) {
     console.error("Exception when fetching article by slug:", error);
     return null;
@@ -82,14 +82,14 @@ export const createArticle = async (article: ArticleFormData): Promise<ArticleTy
       console.error("Error creating article:", error);
       return null;
     }
-    return data as ArticleType;
+    return data as unknown as ArticleType;
   } catch (error) {
     console.error("Exception when creating article:", error);
     return null;
   }
 };
 
-export const updateArticle = async (id: string, updates: Partial<ArticleType>): Promise<ArticleType | null> => {
+export const updateArticle = async (id: string, updates: Partial<Omit<ArticleType, 'id'>>): Promise<ArticleType | null> => {
   try {
     const { data, error } = await supabase
       .from('articles')
@@ -102,7 +102,7 @@ export const updateArticle = async (id: string, updates: Partial<ArticleType>): 
       console.error("Error updating article:", error);
       return null;
     }
-    return data as ArticleType;
+    return data as unknown as ArticleType;
   } catch (error) {
     console.error("Exception when updating article:", error);
     return null;
@@ -215,7 +215,7 @@ export const searchArticles = async (query: string): Promise<ArticleType[]> => {
       console.error("Error searching articles:", error);
       return [];
     }
-    return data as ArticleType[];
+    return data as unknown as ArticleType[];
   } catch (error) {
     console.error("Exception when searching articles:", error);
     return [];
@@ -234,7 +234,7 @@ export const filterArticlesByCategory = async (category: string): Promise<Articl
       console.error("Error filtering articles by category:", error);
       return [];
     }
-    return data as ArticleType[];
+    return data as unknown as ArticleType[];
   } catch (error) {
     console.error("Exception when filtering articles by category:", error);
     return [];
