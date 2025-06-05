@@ -47,12 +47,12 @@ const CtaSection = () => {
                 各アカウントごとにトライアル期間を設けており、無料で主要機能をお試しいただけます
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
+                {/* <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
                   <Link to="/demo" className="flex items-center">
                     無料デモを体験
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
                 <Button asChild variant="outline" size="lg" className="border-white text-white bg-blue-800/60 hover:bg-blue-700 hover:text-white backdrop-blur-sm transition-all duration-300 font-medium">
                   <Link to="/contact">お問い合わせ</Link>
                 </Button>

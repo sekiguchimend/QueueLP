@@ -20,12 +20,12 @@ const HeroSection = () => {
               社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+              {/* <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
                 <Link to="/demo">
                   無料デモを体験
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
+              </Button> */}
               <Button asChild variant="outline" size="lg" className="border-gray-300">
                 <Link to="/contact">お問い合わせ</Link>
               </Button>
