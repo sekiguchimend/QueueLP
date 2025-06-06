@@ -19,8 +19,8 @@ const Footer = () => {
 
   const resources = [
     { name: "ブログ", path: "/blog" },
-    { name: "ニュース", path: "/news" },
-    { name: "開発者ドキュメント", path: "/docs" },
+    // { name: "ニュース", path: "/news" },
+    // { name: "開発者ドキュメント", path: "/docs" },
     { name: "ステータス", path: "/status" },
   ];
 
@@ -135,10 +135,10 @@ const Footer = () => {
                 <span className="text-xs">平日 9:00〜18:00</span>
               </p>
               <a 
-                href="mailto:queue@queuefood.co.jp" 
+                href="mailto:queue@queue-tech.jp" 
                 className="text-sm text-blue-600 hover:text-blue-800"
               >
-                queue@queuefood.co.jp
+                queue@queue-tech.jp
               </a>
               <p className="text-sm text-gray-600">
                 東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ

@@ -6,8 +6,12 @@ import { Clock, Calendar, BellRing, MailCheck, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
+import { useToast } from "@/components/ui/use-toast";
+=======
 import { useToast } from "@/hooks/use-toast";
 import RequestForm from "@/components/RequestForm";
+>>>>>>> 5aa0d380a191484e1419588ae77aad465988a67f
 
 const DemoComingSoon = () => {
   const [email, setEmail] = useState("");

@@ -18,7 +18,7 @@ const ContactInfo = () => {
           icon={<Mail className="text-blue-500" />}
           title="メール"
           detail="24時間受付"
-          contact="queue@queuefood.co.jp"
+          contact="queue@queue-tech.jp"
         />
         
         <ContactMethod 

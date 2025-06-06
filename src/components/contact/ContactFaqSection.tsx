@@ -28,11 +28,11 @@ const ContactFaqSection = () => {
             />
           </div>
           
-          <div className="mt-10">
+{/*           <div className="mt-10">
             <Button asChild variant="outline">
               <a href="/help">ヘルプセンターでもっと見る</a>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -66,8 +66,6 @@ export default function App() {
             <meta name="format-detection" content="telephone=no" />
             <meta name="theme-color" content="#4f46e5" />
           </Helmet>
-          <LocalBusiness />
-          <WebSite />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -103,8 +101,6 @@ export default function App() {
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Toaster />
-          <SonnerToaster position="top-center" closeButton />
         </AuthProvider>
       </Router>
     </HelmetProvider>
