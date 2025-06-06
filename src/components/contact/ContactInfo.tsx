@@ -31,8 +31,8 @@ const ContactInfo = () => {
         <ContactMethod 
           icon={<MapPin className="text-red-500" />}
           title="所在地"
-          detail="〒104-0061"
-          contact="東京都中央区銀座一丁目22番11号 銀座大竹ビジデンス 2F"
+          detail=""
+          contact="東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ"
         />
       </div>
       

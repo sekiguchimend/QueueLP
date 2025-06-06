@@ -15,10 +15,10 @@ const LocalBusiness = () => {
     email: 'info@workmate-ai.jp',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '東京都渋谷区渋谷2-24-12',
-      addressLocality: '渋谷区',
+      streetAddress: '東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ',
+      addressLocality: '中央区',
       addressRegion: '東京都',
-      postalCode: '150-0002',
+      postalCode: '104-0061',
       addressCountry: 'JP'
     },
     telephone: '+81-03-1234-5678',

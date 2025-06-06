@@ -141,11 +141,7 @@ const Footer = () => {
                 queue@queuefood.co.jp
               </a>
               <p className="text-sm text-gray-600">
-                〒104-0061
-                <br />
-                東京都中央区銀座一丁目22番11号
-                <br />
-                銀座大竹ビジデンス 2F
+                東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ
               </p>
             </div>
           </div>

@@ -209,9 +209,7 @@ const HelpCenter = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">所在地</h3>
-                    <p className="text-gray-600">〒104-0061</p>
-                    <p className="text-gray-600">東京都中央区銀座一丁目22番11号</p>
-                    <p className="text-gray-600">銀座大竹ビジデンス 2F</p>
+                                          <p className="text-gray-600">東京都中央区銀座１丁目２２番１１号銀座大竹ビジデンス２Ｆ</p>
                   </div>
                 </div>
               </div>
