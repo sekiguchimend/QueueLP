@@ -6,11 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-<<<<<<< HEAD
     "build:dev": "vite build --mode development",
-=======
-    "build:dev": "next build --mode development",
->>>>>>> 5aa0d380a191484e1419588ae77aad465988a67f
     "lint": "eslint .",
     "preview": "vite preview"
   },
