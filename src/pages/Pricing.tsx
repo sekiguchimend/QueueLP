@@ -41,8 +41,86 @@ const Pricing = () => {
   return (
     <Layout>
       <Helmet>
-        <title>料金プラン | Queue</title>
-        <meta name="description" content="Queueの料金プラン一覧。利用人数に応じた最適なプランをご用意しています。初期費用不要で、固定料金のみのシンプルな料金体系です。" />
+        <title>ワークメイトAI 料金プラン | Workmate AI 価格体系 | AI チャットボット導入費用</title>
+        <meta name="title" content="ワークメイトAI 料金プラン | Workmate AI 価格体系 | AI チャットボット導入費用" />
+        <meta name="description" content="ワークメイトAI（Workmate AI）の料金プラン一覧。利用人数に応じた最適なプランをご用意。初期費用不要で、固定料金のみのシンプルな価格体系。AIチャットボット導入コストを明確化。" />
+        <meta name="keywords" content="ワークメイトAI,Workmate AI,workmate ai,料金プラン,価格,費用,コスト,AI チャットボット 料金,業務効率化 価格,導入費用,月額料金,企業向けAI,法人プラン,料金体系" />
+        <meta name="author" content="Queue株式会社" />
+        
+        <link rel="canonical" href="https://www.workmate-ai.jp/pricing" />
+        
+        <meta property="og:title" content="ワークメイトAI 料金プラン | Workmate AI 価格体系" />
+        <meta property="og:description" content="ワークメイトAI（Workmate AI）の料金プラン。利用人数に応じた最適な価格設定で、AIチャットボットを導入できます。" />
+        <meta property="og:url" content="https://www.workmate-ai.jp/pricing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.workmate-ai.jp/work_mate.png" />
+        <meta property="og:site_name" content="ワークメイトAI | Workmate AI" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ワークメイトAI 料金プラン | Workmate AI 価格体系" />
+        <meta name="twitter:description" content="ワークメイトAI（Workmate AI）の料金プラン。利用人数に応じた最適な価格設定。" />
+        <meta name="twitter:image" content="https://www.workmate-ai.jp/work_mate.png" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "ワークメイトAI",
+              "alternateName": ["Workmate AI", "workmate ai"],
+              "description": "ワークメイトAI（Workmate AI）のAIチャットボットサービス。業務効率化のための企業向けソリューション。",
+              "provider": {
+                "@type": "Organization",
+                "name": "Queue株式会社",
+                "url": "https://www.workmate-ai.jp/"
+              },
+              "url": "https://www.workmate-ai.jp/pricing",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "プランA",
+                  "description": "1-10名向けのワークメイトAIプラン",
+                  "price": "50000",
+                  "priceCurrency": "JPY",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "50000",
+                    "priceCurrency": "JPY",
+                    "unitText": "月額"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "プランB",
+                  "description": "11-30名向けのワークメイトAIプラン",
+                  "price": "100000",
+                  "priceCurrency": "JPY",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "100000",
+                    "priceCurrency": "JPY",
+                    "unitText": "月額"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "プランC",
+                  "description": "31-50名向けのワークメイトAIプラン",
+                  "price": "150000",
+                  "priceCurrency": "JPY",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "150000",
+                    "priceCurrency": "JPY",
+                    "unitText": "月額"
+                  }
+                }
+              ],
+              "category": "AI チャットボット",
+              "serviceType": "業務効率化ソフトウェア"
+            }
+          `}
+        </script>
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">

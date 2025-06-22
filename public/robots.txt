@@ -1,26 +1,59 @@
-# robots.txt for workmate-ai.jp
+# ワークメイトAI (Workmate AI) - Robots.txt
+# 検索エンジン最適化設定
+
+# 全ての検索エンジンクローラーを許可
 User-agent: *
 Allow: /
-Allow: /en/
 
-# 管理者ページなど検索結果に表示させたくないパスを指定
+# 管理者ページやプライベートページの除外
 Disallow: /admin/
-Disallow: /login
-Disallow: /dashboard
-Disallow: /register
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /private/
+Disallow: /internal/
 
-# 開発中または一時的なページをブロック
-Disallow: /demo
-Disallow: /coming-soon
+# 特定のファイル形式の除外
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
 
-# クローラーごとの特別な指示
+# 重複コンテンツの回避
+Disallow: /print/
+Disallow: /*?print=1
+Disallow: /*?format=print
+
+# Googlebot 専用設定
 User-agent: Googlebot
-Allow: /*.js$
-Allow: /*.css$
+Allow: /
+Crawl-delay: 1
 
+# Bingbot 専用設定
 User-agent: Bingbot
-Allow: /*.js$
-Allow: /*.css$
+Allow: /
+Crawl-delay: 1
+
+# Yahoo Japan 専用設定
+User-agent: Y!J-*
+Allow: /
+Crawl-delay: 1
+
+# 悪意のあるボット対策
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
 
 # サイトマップの場所を指定
-Sitemap: https://www.workmate-ai.jp/sitemap.xml 
+Sitemap: https://www.workmate-ai.jp/sitemap.xml
+
+# ホスト情報（優先ドメイン設定）
+Host: https://www.workmate-ai.jp 

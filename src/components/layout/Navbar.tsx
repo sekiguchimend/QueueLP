@@ -51,7 +51,7 @@ const Navbar = () => {
 {/*             <NavItem href="/help" label="ヘルプセンター" />
             <NavItem href="/contact" label="お問い合わせ" /> */}
             <Button asChild className="ml-4 bg-primary hover:bg-primary/90 text-white transition-all shadow-md hover:shadow-lg">
-              <Link to="/login">ログイン</Link>
+              <a href="https://www.workmatechat.com/login" target="_blank" rel="noopener noreferrer">ログイン</a>
             </Button>
           </nav>
 
@@ -100,7 +100,7 @@ const Navbar = () => {
                 <MobileNavItem href="/contact" label="お問い合わせ" onClick={() => setIsMobileMenuOpen(false)} /> */}
                 <div className="pt-2 md:pt-3">
                   <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white transition-all">
-                    <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>ログイン</Link>
+                    <a href="https://www.workmatechat.com/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>ログイン</a>
                   </Button>
                 </div>
               </div>
