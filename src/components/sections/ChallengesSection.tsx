@@ -34,38 +34,38 @@ const ChallengesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ChallengeCard 
             icon={<Clock />}
-            title="情報検索に時間がかかる"
-            description="必要な情報を見つけるために、複数のシステムやフォルダを検索する時間が無駄になっている。"
+            title="「有給申請の方法は？」毎回聞かれる"
+            description="新入社員や忘れがちな社員から、同じ基本的な質問を何度も受け、その都度説明に時間を取られている。"
             delay="0"
           />
           <ChallengeCard 
             icon={<Search />}
-            title="ナレッジの分散"
-            description="社内の知識や情報が様々な場所に散らばっており、必要な時に迅速にアクセスできない。"
+            title="文書が散らばって見つからない"
+            description="就業規則、マニュアル、議事録などが様々な場所に保存され、必要な情報をすぐに見つけることができない。"
             delay="100"
           />
           <ChallengeCard 
             icon={<PieChart />}
-            title="作業の重複"
-            description="同じ質問に何度も回答したり、同じ説明を繰り返し行ったりする非効率な状況が続いている。"
+            title="同じ質問への繰り返し回答"
+            description="「研修資料はどこ？」「会議室の予約方法は？」など、毎回同じ説明をすることで貴重な時間が失われている。"
             delay="200"
           />
           <ChallengeCard 
             icon={<Users />}
-            title="新入社員の教育負担"
-            description="新入社員のオンボーディングや教育に多くの時間とリソースが必要で、既存社員の負担となっている。"
+            title="新入社員のサポート負担"
+            description="新入社員研修や基本的な質問対応で、既存社員の本来の業務時間が圧迫されている。"
             delay="300"
           />
           <ChallengeCard 
             icon={<FileQuestion />}
-            title="マニュアルの更新・管理"
-            description="業務マニュアルの更新や管理が追いつかず、最新の情報が反映されていないことがある。"
+            title="情報の信頼性が不明確"
+            description="口頭での説明や古い資料を参考にしてしまい、最新の正確な情報かどうかがわからない。"
             delay="400"
           />
           <ChallengeCard 
             icon={<ServerCrash />}
-            title="システム間の連携不足"
-            description="複数の社内システム間でデータ連携がスムーズでなく、情報の一元管理ができていない。"
+            title="夜間・休日の情報アクセス困難"
+            description="担当者が不在の時間帯に急ぎの確認が必要になっても、必要な情報にアクセスできない。"
             delay="500"
           />
         </div>

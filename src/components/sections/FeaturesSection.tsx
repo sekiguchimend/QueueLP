@@ -6,7 +6,11 @@ import {
   Globe, 
   Shield, 
   BarChart,
-  Brain
+  Brain,
+  Upload,
+  Users,
+  FileText,
+  Settings
 } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -18,55 +22,67 @@ const FeaturesSection = () => {
             主な機能
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            あらゆる業務課題を解決する先進機能
+            会社の知識を最大限活用する包括的な機能
           </h2>
           <p className="text-xl text-gray-600">
-            社内情報への迅速なアクセスから業務の自動化まで、日々の業務をよりスムーズにする機能が充実
+            文書学習から権限管理、分析まで。会社の情報資産を効率的に活用するための充実した機能群
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon={<MessageSquare className="w-6 h-6" />}
-            title="自然な会話体験"
-            description="自然言語処理技術を活用し、まるで人間と話しているような会話体験を提供します。複雑な質問にも的確に回答します。"
+            icon={<Upload className="w-6 h-6" />}
+            title="簡単文書アップロード"
+            description="PDF、Excel、Word等の文書をドラッグ&ドロップで簡単アップロード。Google Drive連携にも対応し、既存ファイルをすぐに学習できます。"
             delay="0"
           />
           <FeatureCard
-            icon={<Brain className="w-6 h-6" />}
-            title="意図理解能力"
-            description="誤字や言い回しに関わらず、質問の本質を正確に理解。ハルシネーション（誤った情報の生成）なく、意図に沿った適切な回答を提供します。"
+            icon={<MessageSquare className="w-6 h-6" />}
+            title="自然な会話体験"
+            description="誤字や言い回しに関わらず質問の意図を正確に理解。「有給休暇の申請方法は？」といった自然な質問に的確に回答します。"
             delay="100"
           />
           <FeatureCard
-            icon={<Search className="w-6 h-6" />}
-            title="社内情報の即時検索"
-            description="社内文書やナレッジベース、過去の議事録など、膨大な情報から必要なデータを瞬時に検索・提供します。"
+            icon={<FileText className="w-6 h-6" />}
+            title="根拠文書の表示"
+            description="回答の下に「情報ソース：○○資料 P.○」として参照した文書名を表示。回答の信頼性を担保し、詳細確認も可能です。"
             delay="200"
           />
           <FeatureCard
-            icon={<Clock className="w-6 h-6" />}
-            title="予定管理の効率化"
-            description="会議のスケジュール調整や予定の確認、リマインダーの設定など、日々のスケジュール管理をサポートします。"
+            icon={<Users className="w-6 h-6" />}
+            title="4段階権限管理"
+            description="運営者・社長・管理者・社員の4段階権限設定。各権限に応じた機能制限とアクセス制御により、セキュアな運用を実現します。"
             delay="300"
           />
           <FeatureCard
-            icon={<Globe className="w-6 h-6" />}
-            title="多言語対応"
-            description="日本語はもちろん、英語、中国語など多言語に対応。グローバルな社内コミュニケーションをサポートします。"
+            icon={<Settings className="w-6 h-6" />}
+            title="カスタムプロンプト"
+            description="管理者が各文書に対して指令を設定可能。「必ず注釈を付ける」「決定事項とTodoを分けて表示」など、回答をカスタマイズできます。"
             delay="400"
           />
           <FeatureCard
-            icon={<Shield className="w-6 h-6" />}
-            title="セキュリティ対策"
-            description="企業の機密情報を扱うため、高度なセキュリティ対策を実施。権限に基づいたアクセス制御を行います。"
+            icon={<BarChart className="w-6 h-6" />}
+            title="高度な分析機能"
+            description="資料参照回数、感情分析、繰り返し質問パターンなど、AIによる詳細分析。チャット履歴のCSV出力や利用状況レポートも提供します。"
             delay="500"
           />
           <FeatureCard
-            icon={<BarChart className="w-6 h-6" />}
-            title="分析レポート"
-            description="チャットボットの利用状況や頻出質問などを分析し、業務改善のためのインサイトを提供します。"
+            icon={<Clock className="w-6 h-6" />}
+            title="24時間即時対応"
+            description="24時間365日、いつでも質問可能。新入社員研修や急な情報確認など、必要な時にすぐに回答を得られます。"
             delay="600"
+          />
+          <FeatureCard
+            icon={<Shield className="w-6 h-6" />}
+            title="強固なセキュリティ"
+            description="企業の機密情報を扱うため、高度なセキュリティ対策を実施。データ暗号化とアクセス権限の厳密な管理を行います。"
+            delay="700"
+          />
+          <FeatureCard
+            icon={<Search className="w-6 h-6" />}
+            title="社員管理・招待機能"
+            description="管理者は新しい社員の招待、利用状況の確認、社員の削除が可能。初期パスワード設定から一元管理できます。"
+            delay="800"
           />
         </div>
       </div>

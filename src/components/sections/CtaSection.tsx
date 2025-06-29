@@ -16,10 +16,10 @@ const CtaSection = () => {
           <div className="relative z-10 max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                業務効率化の第一歩を踏み出しましょう
+                会社の知識をAIで活用する第一歩を
               </h2>
               <p className="text-xl text-blue-100 mb-10 font-light leading-relaxed">
-                導入企業の97%が業務効率の向上を実感。今すぐ無料デモをお試しいただけます。
+                文書をアップロードするだけで、社員の質問に自動回答。無料デモですぐに体験できます。
               </p>
             </div>
             
@@ -27,24 +27,24 @@ const CtaSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <TrialFeatureCard
                 icon={<FileBox className="h-8 w-8 text-blue-300" />}
-                title="資料アップロード"
-                description="1つの資料のみアップロード可能"
+                title="文書アップロード"
+                description="1つの資料のみアップロード可能（PDF、Excel、Word対応）"
               />
               <TrialFeatureCard
                 icon={<MessageCircle className="h-8 w-8 text-blue-300" />}
-                title="質問回数"
-                description="最大5回まで質問可能"
+                title="質問回数制限"
+                description="1日最大5回まで（毎日午前0時にリセット）"
               />
               <TrialFeatureCard
                 icon={<Building className="h-8 w-8 text-blue-300" />}
-                title="アカウント登録"
-                description="会社名の入力が必須"
+                title="簡単登録"
+                description="会社名とメールアドレスの入力のみ"
               />
             </div>
             
             <div className="text-center">
               <p className="text-blue-100 mb-8 italic">
-                各アカウントごとにトライアル期間を設けており、無料で主要機能をお試しいただけます
+                デモ版では制限がありますが、本格導入前に主要機能をしっかりと体験できます
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {/* <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all duration-300 font-medium">

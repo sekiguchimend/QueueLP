@@ -13,18 +13,18 @@ const BenefitsSection = () => {
               業務時間の削減と<br />生産性の向上を実現
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              チャットボットの導入により、社員の業務効率が向上し、本来の業務に集中できる環境を実現します。
+              会社の文書をAIが学習することで、社員が必要な情報にすぐアクセスでき、本来の業務に集中できる環境を実現します。
             </p>
 
             <div className="space-y-4">
-              <BenefitItem>情報検索時間を最大70%削減</BenefitItem>
-              <BenefitItem>問い合わせ対応の自動化で人的リソースを最適化</BenefitItem>
-              <BenefitItem>24時間365日、即時対応で待ち時間をゼロに</BenefitItem>
-              <BenefitItem>社内ナレッジの共有と活用を促進</BenefitItem>
-              <BenefitItem>新入社員のオンボーディング期間を短縮</BenefitItem>
-              <BenefitItem>AIによる会話ログ分析で業務上の課題を可視化</BenefitItem>
-              <BenefitItem>社内コミュニケーションの傾向分析で組織改善を支援</BenefitItem>
-              <BenefitItem>定期的なレポートで業務効率化の効果を定量的に把握</BenefitItem>
+              <BenefitItem>「有給休暇の申請方法は？」といった質問に即座に回答</BenefitItem>
+              <BenefitItem>回答の根拠となる文書が表示されるため情報の信頼性が高い</BenefitItem>
+              <BenefitItem>24時間365日、いつでも必要な情報を取得可能</BenefitItem>
+              <BenefitItem>新入社員研修の効率化と質問対応時間の削減</BenefitItem>
+              <BenefitItem>4段階の権限管理でセキュアな情報共有を実現</BenefitItem>
+              <BenefitItem>資料参照回数や感情分析でよくある質問パターンを把握</BenefitItem>
+              <BenefitItem>Google Drive連携で既存ファイルを簡単に学習データ化</BenefitItem>
+              <BenefitItem>チャット履歴CSV出力で利用状況を詳細に分析</BenefitItem>
             </div>
           </div>
 

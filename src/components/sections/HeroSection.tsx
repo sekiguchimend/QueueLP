@@ -9,15 +9,15 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <div className="inline-block bg-blue-50 px-4 py-2 rounded-full text-blue-700 font-medium text-sm mb-6">
-              社内向けAIアシスタント
+              社内文書学習型AIアシスタント
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900">
-              業務効率を飛躍的に
-              <span className="block mt-2">高める</span>
+              会社の文書を学習し
+              <span className="block mt-2">質問に自動回答する</span>
               <span className="text-primary block mt-2">AIチャットボット</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-xl">
-              社内情報へのアクセスを迅速化し、日々の業務フローをスマートにする次世代の社内コミュニケーションツール
+              社内文書や情報をAIが学習し、社員からの質問に自動で回答。チャット形式で自然な対話ができ、回答の根拠となった文書も表示されます。
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               {/* <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
@@ -49,13 +49,17 @@ const HeroSection = () => {
                 <div className="p-6">
                   <div className="flex flex-col space-y-6">
                     <div className="self-start max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-sm p-4">
-                      <p className="text-gray-800">今月の営業レポートを教えてください</p>
+                      <p className="text-gray-800">有給休暇の申請方法を教えて</p>
                     </div>
                     <div className="self-end max-w-[80%] bg-blue-50 text-blue-800 rounded-2xl rounded-br-sm p-4">
-                      <p>6月の営業実績は目標の112%を達成しました。特に新規顧客獲得が前月比24%増加しています。詳細レポートをお送りしますか？</p>
+                      <p>有給休暇の申請は以下の手順で行います：<br />
+                      1. 人事システムにログイン<br />
+                      2. 「休暇申請」メニューを選択<br />
+                      3. 希望日と理由を入力して送信<br /><br />
+                      <span className="text-xs bg-blue-100 px-2 py-1 rounded">情報ソース: 就業規則 P.15</span></p>
                     </div>
                     <div className="self-start max-w-[80%] bg-gray-100 rounded-2xl rounded-tl-sm p-4">
-                      <p className="text-gray-800">はい、お願いします。また、来月のイベント情報も教えてください</p>
+                      <p className="text-gray-800">承認までの期間はどのくらい？</p>
                     </div>
                     <div className="flex items-center space-x-2 py-2">
                       <div className="w-6 h-1 bg-blue-200 rounded-full animate-pulse"></div>
